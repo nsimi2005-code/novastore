@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080b19"><title>NOVA STORE</title>
+<link rel="icon" href="assets/nova-logo.png"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#"><img src="assets/nova-logo.png" alt="NOVA logo"><span>NOVA <b>STORE</b></span></a>
+  <input id="search" class="search" placeholder="Oyun və tətbiq axtar...">
+  <div class="actions"><button id="accountBtn" class="ghost">Hesaba daxil ol</button><button id="createBtn" class="primary">Hesab yarat</button></div>
+</header>
+<div class="layout">
+<aside class="side">
+  <a class="active" href="#">⌂　Ana səhifə</a><a href="#games">🎮　Oyunlar</a><a href="#apps">▦　Tətbiqlər</a><a href="#upload">＋　APK yüklə</a>
+  <div class="side-note">NOVA STORE<br><small>Yeni tətbiqləri kəşf et.</small></div>
+</aside>
+<main>
+<section class="hero">
+  <div><p class="eyebrow">YENİ NƏSİL TƏTBİQ MAĞAZASI</p><h1>NOVA <span>STORE</span></h1>
+  <p>Oyunları və tətbiqləri kəşf et, paylaş və yüklə.</p><a class="primary linkbtn" href="#apps">Kəşf etməyə başla →</a></div>
+  <img src="assets/nova-logo.png" alt="" class="hero-mark">
+</section>
+<section class="section"><div class="section-head"><h2>Kateqoriyalar</h2><span>Hamısı bir yerdə</span></div>
+<div class="categories"><button data-cat="Hamısı" class="cat selected">Hamısı</button><button data-cat="Oyunlar" class="cat">🎮 Oyunlar</button><button data-cat="Tətbiqlər" class="cat">▦ Tətbiqlər</button><button data-cat="Alətlər" class="cat">🛠 Alətlər</button><button data-cat="Təhsil" class="cat">🎓 Təhsil</button></div></section>
+<section class="section" id="apps"><div class="section-head"><h2>Populyar tətbiqlər</h2><span>Demo kataloq</span></div><div id="appGrid" class="grid">
+<article class="app-card" data-category="Oyunlar"><div class="app-icon purple">R</div><h3>Roblox</h3><p>Oyun platforması</p><small>Yaş reytinqi: 12+</small></article>
+<article class="app-card" data-category="Oyunlar"><div class="app-icon green">M</div><h3>Minecraft</h3><p>Kəşfiyyat və yaradıcılıq</p><small>Yaş reytinqi: 7+</small></article>
+<article class="app-card" data-category="Tətbiqlər"><div class="app-icon blue">N</div><h3>Nova Notes</h3><p>Qeydlər tətbiqi</p><small>Yaş reytinqi: 3+</small></article>
+</div></section>
+<section class="section upload" id="upload"><div><p class="eyebrow">DEVELOPER ZONE</p><h2>Öz APK faylını paylaş</h2><p>APK seç, tətbiq haqqında məlumatları əlavə et və yoxlamaya göndər.</p></div>
+<form id="uploadForm"><label>Tətbiqin adı<input id="appName" required placeholder="Məsələn: Mənim oyunum"></label>
+<label>Təsvir<input id="appDesc" required placeholder="Tətbiq nə edir?"></label>
+<div class="form-row"><label>Kateqoriya<select id="appCategory"><option>Oyunlar</option><option>Tətbiqlər</option><option>Alətlər</option><option>Təhsil</option></select></label>
+<label>Yaş reytinqi<select id="age"><option>3+</option><option>7+</option><option>12+</option><option>16+</option><option>18+</option></select></label></div>
+<label class="filebox">APK faylı (.apk)<input id="apkFile" type="file" accept=".apk,application/vnd.android.package-archive" required><span id="fileName">Fayl seçmək üçün toxun</span></label>
+<button class="primary full" type="submit">Yoxlamaya göndər</button><p class="tiny">Bu demo versiyadır: fayl yalnız bu brauzerdə seçilir, serverə yüklənmir.</p></form></section>
+<footer>© 2026 NOVA STORE · İcma tərəfindən yaradılıb</footer>
+</main></div>
+<div id="modal" class="modal hidden"><div class="modal-card"><button id="closeModal" class="close">×</button><div class="modal-logo"><img src="assets/nova-logo.png" alt=""></div><h2 id="modalTitle">Hesaba daxil ol</h2><p class="muted">Proton Mail ünvanınla da qeydiyyatdan keçə bilərsən.</p>
+<form id="authForm"><label>E-poçt<input id="email" type="email" required placeholder="ad@proton.me"></label><label>Şifrə<input id="password" type="password" minlength="8" required placeholder="Ən azı 8 simvol"></label><button class="primary full" type="submit">Davam et</button></form><p class="tiny" id="authHint">Qeyd: bu yalnız interfeys demosudur, real hesab yaratmır.</p><button id="switchAuth" class="textbtn">Hesabın yoxdur? Qeydiyyatdan keç</button></div></div>
+<div id="toast" class="toast"></div><script src="app.js"></script>
+</body></html>
